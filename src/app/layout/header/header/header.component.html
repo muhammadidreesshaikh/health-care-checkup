@@ -1,4 +1,4 @@
-<div class="header py-2">
+<div class="header">
     <div class="container">
         <div class="toggleContainer" (click)="toggleMenu()" [class.change]="toggleButton">
             <div class="bar1"></div>
@@ -7,20 +7,21 @@
         </div>
 
         <div class="row align-items-center">
-            <div class="col-md-2 col-6">
-                <a class="logo cursor-pointer" routerLink="/">
-                    <img src="../../../assets/img/logo-goloqal.png" alt="Logo">
+            <div class="col-6 col-md-4 col-lg-4">
+                <a class="logo" routerLink="/homepage">
+                    <!-- <img src="../../../assets/img/logo-goloqal.png" alt="Logo"> -->
+                    Health Care Checkup
                 </a>
             </div>
 
-            <div class="col-md-10 col-6">
+            <div class="col-6 col-md-8 col-lg-8">
                 <div class="nav">
                     <ul>
-                        <li><a class="text-uppercase" routerLink="/page/page-listing">My Page</a></li>
-                        <li> <a class="text-uppercase" routerLink="/for-you">For You</a></li>
-                        <li><a class="text-uppercase" routerLink="page/create-page">Create Page</a></li>
-                        <li><a class="text-uppercase" routerLink="/auth/login">SIGN IN</a></li>
-                        <li><a class="text-uppercase" routerLink="/auth/signup">JOIN</a></li>
+                        <li><a class="text-uppercase" routerLink="/about-us">About Us</a></li>
+                        <li> <a class="text-uppercase" routerLink="/services">Services</a></li>
+                        <li><a class="text-uppercase" routerLink="/departments">Departments</a></li>
+                        <li><a class="text-uppercase" routerLink="/doctors">Doctors</a></li>
+                        <li><a class="text-uppercase" routerLink="/contact-us">Contact Us</a></li>
                     </ul>
                 </div>
             </div>

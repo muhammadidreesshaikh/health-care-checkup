@@ -2,22 +2,28 @@
 
 .header {
     background: white;
-    height: 70px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 3;
+    padding: 15px 0;
+    // height: 70px;
+    // width: 100%;
+    // top: 0;
+    // position: fixed;
+    // z-index: 3;
     box-shadow: 0 5px 15px 0 rgb(0 0 0 / 5%);
 
-    .logo {
-        img {
-            width: 100%;
-            height: 55px;
-            object-fit: cover;
+    a {
+        &.logo {
+            // img {
+            //     width: 100%;
+            //     height: 55px;
+            //     object-fit: cover;
 
-            @include respond(tablet) {
-                width: 70%;
-            }
+            //     @include respond(tablet) {
+            //         width: 70%;
+            //     }
+            // }
+            font-size: 18px;
+            color: $blue;
+            font-weight: 500;
         }
     }
 
@@ -31,13 +37,18 @@
         ul {
             display: flex;
             list-style: none;
+            margin-bottom: 0;
 
             li {
                 a {
-                    color: $lightBlack;
+                    color: $black;
                     font-size: 14px;
                     padding: 0 13px;
                     cursor: pointer;
+
+                    &:hover {
+                        color: $pink;
+                    }
                 }
 
                 .user-img {
@@ -54,7 +65,7 @@
                 }
 
                 &:hover {
-                    color: $orange;
+                    color: $pink;
                     transition: 0.5s;
                     opacity: 0.5s;
                 }
@@ -65,8 +76,8 @@
     .toggleContainer {
         cursor: pointer;
         position: fixed;
-        top: 18px;
-        right: 30px;
+        top: 12px;
+        right: 20px;
         z-index: 3;
     }
 
@@ -76,7 +87,7 @@
         border-radius: 10px;
         width: 30px;
         height: 3px;
-        background: $lightBlack;
+        background: $default;
         margin: 6px 0;
         transition: 0.5s;
     }
@@ -85,7 +96,7 @@
         .bar1 {
             -webkit-transform: rotate(-45deg) translate(-6px, 6px);
             transform: rotate(-45deg) translate(-6px, 6px);
-            background: $default;
+            background: $white;
 
         }
 
@@ -96,7 +107,7 @@
         .bar3 {
             -webkit-transform: rotate(45deg) translate(-8px, -8px);
             transform: rotate(45deg) translate(-7px, -7px);
-            background: $default;
+            background: $white;
 
         }
     }
@@ -144,7 +155,7 @@
 }
 
 .sidebar {
-    padding: 75px 0 0 15px;
+    padding: 70px 0 0 25px;
 
     .bar {
         overflow-x: scroll;
@@ -168,7 +179,7 @@
             cursor: pointer;
 
             &:hover {
-                color: $orange;
+                color: $pink;
                 transition: 0.5s;
                 opacity: 0.5s;
             }
@@ -188,11 +199,11 @@
         overflow-y: auto;
 
         @include respond(tablet) {
-            padding: 3% 0 0 5%;
+            // padding: 3% 0 0 5%;
         }
 
         @include respond(mobile) {
-            padding: 5% 0 0 5%;
+            // padding: 5% 0 0 5%;
         }
 
         li {
@@ -200,12 +211,12 @@
 
             a {
                 text-decoration: none;
-                color: $black;
+                color: $white;
                 font-size: 16px;
                 transition: 0.3s;
 
                 &:hover {
-                    color: $orange;
+                    color: $white;
                 }
 
                 img {
@@ -221,8 +232,8 @@
 
     &.side {
         position: fixed;
-        width: 25%;
-        background: white;
+        width: 35%;
+        background: $default;
         color: $white;
         right: -50%;
         top: 0;
