@@ -1,1 +1,66 @@
-<p>header works!</p>
+<div class="header py-2">
+    <div class="container">
+        <div class="toggleContainer" (click)="toggleMenu()" [class.change]="toggleButton">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+
+        <div class="row align-items-center">
+            <div class="col-md-2 col-6">
+                <a class="logo cursor-pointer" routerLink="/">
+                    <img src="../../../assets/img/logo-goloqal.png" alt="Logo">
+                </a>
+            </div>
+
+            <div class="col-md-10 col-6">
+                <div class="nav">
+                    <ul>
+                        <li><a class="text-uppercase" routerLink="/page/page-listing">My Page</a></li>
+                        <li> <a class="text-uppercase" routerLink="/for-you">For You</a></li>
+                        <li><a class="text-uppercase" routerLink="page/create-page">Create Page</a></li>
+                        <li><a class="text-uppercase" routerLink="/auth/login">SIGN IN</a></li>
+                        <li><a class="text-uppercase" routerLink="/auth/signup">JOIN</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="sidebar side" [class.show]="sidebar">
+    <ul>
+        <li>
+            <a (click)="toggleMenu()" routerLink="/admin">
+                Admin Controls
+            </a>
+        </li>
+        <li>
+            <a (click)="toggleMenu()" routerLink="/page/create-page">
+                Create Page
+            </a>
+        </li>
+        <li>
+            <a (click)="toggleMenu()" routerLink="/blogs/create-blog">
+                Write Blog
+            </a>
+        </li>
+        <li>
+            <a (click)="toggleMenu()" routerLink="/for-you">
+                For You
+            </a>
+        </li>
+        <li>
+            <a (click)="toggleMenu()" routerLink="/categories/add-category">
+                Add Category
+            </a>
+        </li>
+        <li>
+            <a (click)="toggleMenu()" routerLink="/auth/edit-profile">
+                Profile
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div class="fade-area" [class.show]="fadeSection" (click)="toggleMenu()"></div>

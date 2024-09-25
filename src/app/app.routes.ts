@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { AboutUsComponent } from './components/about-us/about-us.component';
-import { ServiceCoComponent } from './components/service-co/service-co.component';
+import { ServicesComponent } from './components/services/services.component';
 import { DepartmentsComponent } from './components/departments/departments.component';
 import { DoctorsComponent } from './components/doctors/doctors.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
@@ -20,8 +20,8 @@ export const routes: Routes = [
         component: AboutUsComponent
     },
     {
-        path: 'service-co',
-        component: ServiceCoComponent
+        path: 'services',
+        component: ServicesComponent
     },
     {
         path: 'departments',

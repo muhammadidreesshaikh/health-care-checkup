@@ -1,0 +1,263 @@
+@import '../../../../styles.scss';
+
+.header {
+    background: white;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+    box-shadow: 0 5px 15px 0 rgb(0 0 0 / 5%);
+
+    .logo {
+        img {
+            width: 100%;
+            height: 55px;
+            object-fit: cover;
+
+            @include respond(tablet) {
+                width: 70%;
+            }
+        }
+    }
+
+    .nav {
+        float: right;
+
+        @include respond(tablet) {
+            display: none;
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+
+            li {
+                a {
+                    color: $lightBlack;
+                    font-size: 14px;
+                    padding: 0 13px;
+                    cursor: pointer;
+                }
+
+                .user-img {
+                    img {
+                        cursor: pointer;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50px;
+                        object-fit: cover;
+                        object-position: center;
+                        position: absolute;
+                        bottom: 4px;
+                    }
+                }
+
+                &:hover {
+                    color: $orange;
+                    transition: 0.5s;
+                    opacity: 0.5s;
+                }
+            }
+        }
+    }
+
+    .toggleContainer {
+        cursor: pointer;
+        position: fixed;
+        top: 18px;
+        right: 30px;
+        z-index: 3;
+    }
+
+    .bar1,
+    .bar2,
+    .bar3 {
+        border-radius: 10px;
+        width: 30px;
+        height: 3px;
+        background: $lightBlack;
+        margin: 6px 0;
+        transition: 0.5s;
+    }
+
+    .change {
+        .bar1 {
+            -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+            transform: rotate(-45deg) translate(-6px, 6px);
+            background: $default;
+
+        }
+
+        .bar2 {
+            opacity: 0;
+        }
+
+        .bar3 {
+            -webkit-transform: rotate(45deg) translate(-8px, -8px);
+            transform: rotate(45deg) translate(-7px, -7px);
+            background: $default;
+
+        }
+    }
+
+    .profile {
+        position: relative;
+
+        img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    .back-btn a {
+        color: $white;
+        position: absolute;
+        left: 5%;
+    }
+
+    .right-btn a {
+        color: $white;
+        position: absolute;
+        right: 5%;
+    }
+}
+
+.fade-area {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .85);
+    opacity: 0.5;
+    transition: 0.5s;
+    z-index: 1;
+
+    &.show {
+        display: block;
+    }
+}
+
+.sidebar {
+    padding: 75px 0 0 15px;
+
+    .bar {
+        overflow-x: scroll;
+        white-space: nowrap;
+        margin-top: 16%;
+        text-align: center;
+
+        @include respond(tablet) {
+            margin-top: 8%;
+        }
+
+        @include respond(mobile) {
+            margin-top: 14%;
+        }
+
+        a {
+            display: inline-block;
+            color: $black;
+            font-size: 14px;
+            padding: 13px;
+            cursor: pointer;
+
+            &:hover {
+                color: $orange;
+                transition: 0.5s;
+                opacity: 0.5s;
+            }
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: $white;
+        text-transform: capitalize;
+    }
+
+    ul {
+        list-style: none;
+        margin-bottom: 0;
+        padding-left: 0;
+        overflow-y: auto;
+
+        @include respond(tablet) {
+            padding: 3% 0 0 5%;
+        }
+
+        @include respond(mobile) {
+            padding: 5% 0 0 5%;
+        }
+
+        li {
+            padding: 10px 0 10px 0;
+
+            a {
+                text-decoration: none;
+                color: $black;
+                font-size: 16px;
+                transition: 0.3s;
+
+                &:hover {
+                    color: $orange;
+                }
+
+                img {
+                    width: 40px;
+                    background: #485563;
+                    padding: 2px;
+                    border-radius: 50%;
+                    margin: 0 10px 0 0;
+                }
+            }
+        }
+    }
+
+    &.side {
+        position: fixed;
+        width: 25%;
+        background: white;
+        color: $white;
+        right: -50%;
+        top: 0;
+        bottom: 0;
+        z-index: 2;
+        transition: 0.8s;
+        box-shadow: 5px 0px 35px 15px #f2f3f5;
+
+        &.show {
+            right: 0;
+        }
+
+        @include respond(mobile) {
+            width: 100%;
+            right: -100%;
+        }
+
+        @include respond(tablet) {
+            width: 100%;
+            right: -100%;
+        }
+    }
+
+    &.flap {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(60deg, #29323c 0%, #485563 100%);
+        color: $white;
+        top: -100%;
+        z-index: 1;
+        transition: 0.8s;
+
+        &.show {
+            top: 0;
+        }
+    }
+}
