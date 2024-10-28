@@ -7,9 +7,8 @@
         </div>
 
         <div class="row align-items-center">
-            <div class="col-6 col-md-4 col-lg-4">
+            <div class="col-8 col-md-4 col-lg-4">
                 <a class="logo" routerLink="/homepage">
-                    <!-- <img src="../../../assets/img/logo-goloqal.png" alt="Logo"> -->
                     Health Care Checkup
                 </a>
             </div>
@@ -32,34 +31,19 @@
 <div class="sidebar side" [class.show]="sidebar">
     <ul>
         <li>
-            <a (click)="toggleMenu()" routerLink="/admin">
-                Admin Controls
-            </a>
+            <a (click)="toggleMenu()" routerLink="/about-us">About Us</a>
         </li>
         <li>
-            <a (click)="toggleMenu()" routerLink="/page/create-page">
-                Create Page
-            </a>
+            <a (click)="toggleMenu()" routerLink="/services">Services</a>
         </li>
         <li>
-            <a (click)="toggleMenu()" routerLink="/blogs/create-blog">
-                Write Blog
-            </a>
+            <a (click)="toggleMenu()" routerLink="/departments">Departments</a>
         </li>
         <li>
-            <a (click)="toggleMenu()" routerLink="/for-you">
-                For You
-            </a>
+            <a (click)="toggleMenu()" routerLink="/doctors">Doctors</a>
         </li>
         <li>
-            <a (click)="toggleMenu()" routerLink="/categories/add-category">
-                Add Category
-            </a>
-        </li>
-        <li>
-            <a (click)="toggleMenu()" routerLink="/auth/edit-profile">
-                Profile
-            </a>
+            <a (click)="toggleMenu()" routerLink="/contact-us">Contact Us</a>
         </li>
     </ul>
 </div>

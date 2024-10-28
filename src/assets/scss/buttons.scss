@@ -1,0 +1,51 @@
+.large-btn-red {
+    background-color: $red;
+    padding: 8px 20px;
+    color: $white;
+    border-radius: 3px;
+    font-size: 16px;
+
+    &:hover {
+        transition: 0.5s;
+        background-color: #ff2c2c;
+    }
+}
+
+.large-btn-blue {
+    background-color: $blue;
+    padding: 8px 20px;
+    color: $white;
+    border-radius: 3px;
+    font-size: 16px;
+
+    &:hover {
+        transition: 0.5s;
+        background-color: #0b12ff;
+    }
+}
+
+.small-btn-red {
+    background-color: $red;
+    padding: 7px 10px;
+    color: $white;
+    border-radius: 3px;
+    font-size: 12px;
+
+    &:hover {
+        transition: 0.5s;
+        background-color: #ff2c2c;
+    }
+}
+
+.small-btn-blue {
+    background-color: $blue;
+    padding: 7px 10px;
+    color: $white;
+    border-radius: 3px;
+    font-size: 12px;
+
+    &:hover {
+        transition: 0.5s;
+        background-color: #0b12ff;
+    }
+}

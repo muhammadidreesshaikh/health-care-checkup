@@ -1,29 +1,25 @@
 @import '../../../../styles.scss';
 
 .header {
-    background: white;
+    background: $white;
     padding: 15px 0;
-    // height: 70px;
-    // width: 100%;
-    // top: 0;
-    // position: fixed;
-    // z-index: 3;
+    height: 57px;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 3;
     box-shadow: 0 5px 15px 0 rgb(0 0 0 / 5%);
 
     a {
         &.logo {
-            // img {
-            //     width: 100%;
-            //     height: 55px;
-            //     object-fit: cover;
-
-            //     @include respond(tablet) {
-            //         width: 70%;
-            //     }
-            // }
-            font-size: 18px;
-            color: $blue;
             font-weight: 500;
+            font-size: 18px;
+            text-transform: uppercase;
+            color: $blue;
+        }
+
+        &:hover {
+            background-color: unset;
         }
     }
 
@@ -47,7 +43,7 @@
                     cursor: pointer;
 
                     &:hover {
-                        color: $pink;
+                        color: $blue;
                     }
                 }
 
@@ -65,7 +61,7 @@
                 }
 
                 &:hover {
-                    color: $pink;
+                    color: $blue;
                     transition: 0.5s;
                     opacity: 0.5s;
                 }
@@ -87,7 +83,7 @@
         border-radius: 10px;
         width: 30px;
         height: 3px;
-        background: $default;
+        background: $bg-default;
         margin: 6px 0;
         transition: 0.5s;
     }
@@ -96,7 +92,7 @@
         .bar1 {
             -webkit-transform: rotate(-45deg) translate(-6px, 6px);
             transform: rotate(-45deg) translate(-6px, 6px);
-            background: $white;
+            background: $blue;
 
         }
 
@@ -107,7 +103,7 @@
         .bar3 {
             -webkit-transform: rotate(45deg) translate(-8px, -8px);
             transform: rotate(45deg) translate(-7px, -7px);
-            background: $white;
+            background: $blue;
 
         }
     }
@@ -179,7 +175,7 @@
             cursor: pointer;
 
             &:hover {
-                color: $pink;
+                color: $blue;
                 transition: 0.5s;
                 opacity: 0.5s;
             }
@@ -233,14 +229,14 @@
     &.side {
         position: fixed;
         width: 35%;
-        background: $default;
+        background: $bg-default;
         color: $white;
         right: -50%;
         top: 0;
         bottom: 0;
         z-index: 2;
         transition: 0.8s;
-        box-shadow: 5px 0px 35px 15px #f2f3f5;
+        // box-shadow: 5px 0px 35px 15px #f2f3f5;
 
         &.show {
             right: 0;
