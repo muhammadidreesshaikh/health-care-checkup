@@ -1,3 +1,4 @@
+<!-- section-banner -->
 <div class="banner">
     <div class="container">
         <div class="row">
@@ -10,6 +11,40 @@
 
                     <div class="banner-btn">
                         <a href="#" class="large-btn-red">View Our Services</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- section-online-services -->
+<div class="online-services">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-4" *ngFor="let item of onlineServices; let i = index">
+                <div class="small-card">
+                    <img [src]="item.image" alt="{{ item.title }}">
+                    <h2>{{ item.title }}</h2>
+
+                    <select class="form-select mt-2" *ngIf="i === 0">
+                        <option *ngFor="let option of item.options" [value]="option">
+                            {{ option }}
+                        </option>
+                    </select>
+
+                    <div *ngIf="i === 1">
+                        <input type="text" class="form-control mt-2" placeholder="First Name">
+                    </div>
+
+                    <div *ngIf="i === 2">
+                        <input type="text" class="form-control mt-2" placeholder="Search Products">
+                    </div>
+
+                    <div class="small-card-btn">
+                        <a routerLink="/doctors" class="small-btn-blue">Search</a>
                     </div>
                 </div>
             </div>
