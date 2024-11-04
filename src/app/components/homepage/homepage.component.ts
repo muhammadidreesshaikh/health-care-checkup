@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-homepage',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.scss'
 })
@@ -25,7 +26,8 @@ export class HomepageComponent {
         'Hepatology',
         'Internal Medicine',
         'Nephrologist'
-      ]
+      ],
+      link: '/doctors',
     },
     {
       title: 'Book An Appointment',
@@ -42,7 +44,8 @@ export class HomepageComponent {
         'Hepatology',
         'Internal Medicine',
         'Nephrologist'
-      ]
+      ],
+      link: '/online-appointment',
     },
     {
       title: 'Online Pharmacy',
@@ -59,7 +62,8 @@ export class HomepageComponent {
         'Hepatology',
         'Internal Medicine',
         'Nephrologist'
-      ]
+      ],
+      link: '/online-pharmacy',
     }
   ];
 }

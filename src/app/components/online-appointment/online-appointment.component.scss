@@ -1,0 +1,18 @@
+@import '../../../styles.scss';
+
+.standard-banner {
+    background-image: url(https://i.ibb.co/61rgMS0/02.jpg);
+}
+
+.appointment{
+    padding: 50px 0;
+
+    .appointment-form{
+        margin-top: 30px;
+
+        .appointment-btn{
+            margin-top: 25px;
+            float: right;
+        }
+    }
+}
